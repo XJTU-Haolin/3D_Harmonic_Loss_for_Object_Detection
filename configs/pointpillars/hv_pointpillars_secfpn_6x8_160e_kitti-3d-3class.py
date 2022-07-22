@@ -79,3 +79,5 @@ runner = dict(max_epochs=80)
 
 # Use evaluation interval=2 reduce the number of evaluation timese
 evaluation = dict(interval=2)
+
+# load_from  = '/home/haolin/DATA_2T/model/pointpillar_baseline.pth'

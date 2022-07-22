@@ -1,6 +1,6 @@
 # dataset settings
 dataset_type = 'KittiDataset'
-data_root = 'data/kitti/'
+data_root = '/home/haolin/CVPR/NEW/mmdetection3d_new_chen/data/kitti/'
 class_names = ['Pedestrian', 'Cyclist', 'Car']
 point_cloud_range = [0, -40, -3, 70.4, 40, 1]
 input_modality = dict(use_lidar=True, use_camera=False)
@@ -97,7 +97,7 @@ eval_pipeline = [
 
 data = dict(
     samples_per_gpu=6,
-    workers_per_gpu=4,
+    workers_per_gpu=3,
     train=dict(
         type='RepeatDataset',
         times=2,

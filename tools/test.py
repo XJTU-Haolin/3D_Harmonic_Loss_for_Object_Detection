@@ -36,8 +36,8 @@ except ImportError:
 def parse_args():
     parser = argparse.ArgumentParser(
         description='MMDet test (and eval) a model')
-    parser.add_argument('config', help='test config file path')
-    parser.add_argument('checkpoint', help='checkpoint file')
+    parser.add_argument('--config', default='configs/pointpillars/hv_pointpillars_secfpn_6x8_160e_kitti-3d-3class.py',help='test config file path')
+    parser.add_argument('--checkpoint', default='/home/haolin/DATA_2T/model/pointpillar_baseline.pth', help='checkpoint file')
     parser.add_argument('--out', help='output result file in pickle format')
     parser.add_argument(
         '--fuse-conv-bn',

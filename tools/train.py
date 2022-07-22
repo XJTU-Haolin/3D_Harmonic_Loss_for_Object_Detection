@@ -32,7 +32,9 @@ except ImportError:
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a detector')
-    parser.add_argument('config', help='train config file path')
+    parser.add_argument('--config', default='configs/pointpillars/pointpillar_kitti_harmonic_loss.py',help='train config file path')
+    # parser.add_argument('--config', default='configs/pointpillars/hv_pointpillars_secfpn_6x8_160e_kitti-3d-3class.py',
+    #                     help='train config file path')
     parser.add_argument('--work-dir', help='the dir to save logs and models')
     parser.add_argument(
         '--resume-from', help='the checkpoint file to resume from')
