@@ -15,6 +15,7 @@ log_level = 'INFO'
 work_dir = None
 load_from = None
 resume_from = None
+# resume_from = './work_dirs/point_rcnn_2x8_kitti-3d-3classes/latest.pth'
 workflow = [('train', 1)]
 
 # disable opencv multithreading to avoid system being overloaded

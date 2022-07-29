@@ -1,6 +1,6 @@
 _base_ = [
     '../_base_/schedules/cyclic_40e.py', '../_base_/default_runtime.py',
-    '../_base_/models/parta2.py'
+    '../_base_/models/parta2_harmonic_loss.py'
 ]
 
 point_cloud_range = [0, -40, -3, 70.4, 40, 1]
@@ -120,4 +120,5 @@ lr = 0.001
 optimizer = dict(lr=lr)
 evaluation = dict(pipeline=eval_pipeline)
 find_unused_parameters = True
-resume_from = './work_dirs/hv_PartA2_secfpn_2x8_cyclic_80e_kitti-3d-3class/epoch_36.pth'
+
+
