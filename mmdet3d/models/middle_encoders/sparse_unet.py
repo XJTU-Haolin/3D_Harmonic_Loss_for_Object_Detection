@@ -2,7 +2,6 @@
 import torch
 
 from mmdet3d.ops.spconv import IS_SPCONV2_AVAILABLE
-
 if IS_SPCONV2_AVAILABLE:
     from spconv.pytorch import SparseConvTensor, SparseSequential
 else:

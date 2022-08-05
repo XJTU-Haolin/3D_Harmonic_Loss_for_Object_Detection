@@ -62,7 +62,7 @@ model = dict(
         upsample_strides=[1, 2],
         out_channels=[256, 256]),
     pts_bbox_head=dict(
-        type='Anchor3DHead',
+        type='Anchor3DHeadRevise',
         num_classes=3,
         in_channels=512,
         feat_channels=512,
@@ -81,15 +81,29 @@ model = dict(
         diff_rad_by_sin=True,
         assign_per_class=True,
         bbox_coder=dict(type='DeltaXYZWLHRBBoxCoder'),
+        # loss_cls=dict(
+        #     type='FocalLoss',
+        #     use_sigmoid=True,
+        #     gamma=2.0,
+        #     alpha=0.25,
+        #     loss_weight=1.0),
+        # loss_bbox=dict(type='SmoothL1Loss', beta=1.0 / 9.0, loss_weight=2.0),
+        # loss_dir=dict(
+        #     type='CrossEntropyLoss', use_sigmoid=False, loss_weight=0.2)),
+############################## by haolin ##############################
         loss_cls=dict(
             type='FocalLoss',
             use_sigmoid=True,
             gamma=2.0,
             alpha=0.25,
-            loss_weight=1.0),
-        loss_bbox=dict(type='SmoothL1Loss', beta=1.0 / 9.0, loss_weight=2.0),
+            reduction = 'none',
+            loss_weight=1.0
+            ),
+        loss_bbox=dict(type='SmoothL1Loss', beta=1.0 / 9.0, reduction ='none', loss_weight=2.0),
         loss_dir=dict(
-            type='CrossEntropyLoss', use_sigmoid=False, loss_weight=0.2)),
+            type='CrossEntropyLoss', use_sigmoid=False, reduction ='none',loss_weight=0.2)),
+
+############################## by haolin ##############################
     # model training and testing settings
     train_cfg=dict(
         pts=dict(
@@ -241,11 +255,13 @@ data = dict(
         box_type_3d='LiDAR'))
 
 # Training settings
-optimizer = dict(weight_decay=0.01)
+# optimizer = dict(weight_decay=0.01)
+optimizer = dict(weight_decay=0.00001)
 # max_norm=10 is better for SECOND
 optimizer_config = dict(grad_clip=dict(max_norm=35, norm_type=2))
 
 evaluation = dict(interval=1, pipeline=eval_pipeline)
 
 # You may need to download the model first is the network is unstable
-load_from = 'https://download.openmmlab.com/mmdetection3d/pretrain_models/mvx_faster_rcnn_detectron2-caffe_20e_coco-pretrain_gt-sample_kitti-3-class_moderate-79.3_20200207-a4a6a3c7.pth'  # noqa
+# load_from = 'https://download.openmmlab.com/mmdetection3d/pretrain_models/mvx_faster_rcnn_detectron2-caffe_20e_coco-pretrain_gt-sample_kitti-3-class_moderate-79.3_20200207-a4a6a3c7.pth'  # noqa
+load_from = '/home/haolin/CVPR/NEW/TT3D/work_dirs/mvxnet_harmonic_loss/epoch_40.pth'

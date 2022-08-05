@@ -1,4 +1,4 @@
-# Time-friendly-and-Task-consistent-3D-Object-Detection
+# TT3D: Time-friendly-and-Task-consistent-3D-Object-Detection
   
 ## Notification  
 
@@ -16,7 +16,7 @@ Our implementation is relied on [mmdetection3D](https://github.com/open-mmlab/mm
 
 python = 3.7  
 pytorch = 1.6    
-CPU: i7-10700K
+CPU: i7-10700K  
 GPU: RTX-2080Ti  
 other requriements are same as in [mmdetection3D](https://github.com/open-mmlab/mmdetection3d)
 

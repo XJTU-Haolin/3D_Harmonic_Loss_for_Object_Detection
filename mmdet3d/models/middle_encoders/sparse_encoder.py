@@ -9,6 +9,7 @@ from mmdet3d.ops.spconv import IS_SPCONV2_AVAILABLE
 from mmdet.models.losses import sigmoid_focal_loss, smooth_l1_loss
 from ..builder import MIDDLE_ENCODERS
 
+
 if IS_SPCONV2_AVAILABLE:
     from spconv.pytorch import SparseConvTensor, SparseSequential
 else:
