@@ -23,7 +23,8 @@ other requriements are same as in [mmdetection3D](https://github.com/open-mmlab/
 Please follow the  [mmdetection3D](https://github.com/open-mmlab/mmdetection3d) to convert KITTI Dataset and Waymo Dataset     
 
 ## Training   
-check `configs/_base_/models/hv_second_secfpn_kitti_harmonic_loss.py` as an example to customize other model configs to use our revised anchorhead with harmonic loss for detectors. You can follow official document of [mmdetection3D](https://github.com/open-mmlab/mmdetection3d) to know how to configurate configs and train models.          
+Note that our 3D harmonic loss optimization can be implemented to train almost all anchor-based 3D detectors without inference time cost.
+Please get familar with mmdetection3D-format config in advance, and then you can check `configs/_base_/models/hv_second_secfpn_kitti_harmonic_loss.py` as an example to customize other model configs, and use our revised anchor-head with harmonic loss for 3D detectors. You can follow official document of [mmdetection3D](https://github.com/open-mmlab/mmdetection3d) to know how to configurate configs and train models.          
 ## Test
 You can follow official document of [mmdetection3D](https://github.com/open-mmlab/mmdetection3d) to test models.            
 
