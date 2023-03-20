@@ -15,14 +15,15 @@ from .shape_aware_head import ShapeAwareHead
 from .smoke_mono3d_head import SMOKEMono3DHead
 from .ssd_3d_head import SSD3DHead
 from .vote_head import VoteHead
-from .anchor3d_head_harmonic_loss import Anchor3DHeadRevise
+from .anchor3d_head_revise_new import Anchor3DHeadRevise
 # from parta2_rpn_head_harmonic import PartA2RPNHeadReivse
-from .parta2_rpn_head_harmonic import PartA2RPNHeadReivse
-from .point_rpn_head_harmonic_loss import PointRPNHead_Revise
+# from .parta2_rpn_head_harmonic import PartA2RPNHeadReivse
+# from .point_rpn_head_harmonic_loss import PointRPNHead_Revise
 __all__ = [
     'Anchor3DHead', 'FreeAnchor3DHead', 'PartA2RPNHead', 'VoteHead',
     'SSD3DHead', 'BaseConvBboxHead', 'CenterHead', 'ShapeAwareHead',
     'BaseMono3DDenseHead', 'AnchorFreeMono3DHead', 'FCOSMono3DHead',
     'GroupFree3DHead', 'PointRPNHead', 'SMOKEMono3DHead', 'PGDHead',
-    'MonoFlexHead','Anchor3DHeadRevise','PartA2RPNHeadReivse','PointRPNHead_Revise'
+    'MonoFlexHead','Anchor3DHeadRevise',
+#     'PartA2RPNHeadReivse','PointRPNHead_Revise'
 ]
