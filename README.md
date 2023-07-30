@@ -8,7 +8,7 @@ Our proposed **3D Harmonic Loss** can be applied to many lidar-based 3D object d
 <img src="vis.png" alt="Alleviating inconsistency problem in 3D detection via our proposed 3D harmonic loss" align="middle" width="1000"/>
 </p>
 
-Paper in ArXiv: [PDF](https://arxiv.org/pdf/2211.03407.pdf) (Submitted to IEEE TVT)
+Paper in IEEE: [PDF](https://ieeexplore.ieee.org/document/10173488/) (IEEE T-VT)
 
 Our implementation is relied on [mmdetection3D](https://github.com/open-mmlab/mmdetection3d)
 
