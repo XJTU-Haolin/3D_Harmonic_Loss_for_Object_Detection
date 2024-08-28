@@ -1,4 +1,4 @@
-# TT3D: Time-friendly-and-Task-consistent-3D-Object-Detection
+# 3D Harmonic Loss: Towards Task-consistent and Time-friendly 3D Object Detection on Edge for V2X Orchestration
   
 ## Notification  
 
